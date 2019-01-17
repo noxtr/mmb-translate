@@ -21,7 +21,7 @@ public class TranslateController {
 
     @PostMapping(produces = TEXT_PLAIN_VALUE, consumes = TEXT_PLAIN_VALUE)
     @ApiOperation(value = "Return translated string", response = String.class)
-    public String findAllCarBrand(@RequestBody String value) {
+    public String translate(@RequestBody String value) {
         return translateService.transform(value);
     }
 
